@@ -1,62 +1,75 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hant" data-theme="caramellatte">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yami｜台灣商業插畫家・日系透明感水彩生活小物接案合作</title>
   <meta name="description" content="提供專業商業插畫設計、手繪風生活小物、網頁視覺與 IP 角色設計。專長日系透明感水彩風格，歡迎商業合作與插畫接案洽詢。">
-  <meta name="theme-color" content="#f7efe7">
+  <meta name="theme-color" content="#fcfbf7">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+  <style type="text/tailwindcss">
+    @theme {
+      --font-display: 'Cormorant Garamond', 'Playfair Display', serif;
+      --font-sans: 'Noto Sans TC', sans-serif;
+      --font-serif: 'Noto Serif TC', serif;
+    }
+  </style>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#home">Yami</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
+<body class="bg-base-100 text-base-content font-sans">
+  <header class="sticky top-0 z-50 border-b border-base-300/50 bg-base-100/80 backdrop-blur-xl">
+    <nav class="container mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <a class="font-display text-3xl font-semibold tracking-[0.18em] text-primary" href="#home">Yami</a>
+      <button class="btn btn-ghost btn-circle lg:hidden" type="button" data-menu-toggle aria-label="開啟選單">
+        <i class="bi bi-list text-2xl"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="#portfolio">作品</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">服務</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">聯絡</a></li>
-          <li class="nav-item">
-            <a class="btn btn-primary ms-lg-3" href="#contact"><i class="bi bi-envelope-paper-heart me-2"></i>免費諮詢</a>
-          </li>
-        </ul>
+      <div class="hidden lg:flex lg:items-center lg:gap-6" data-menu>
+        <a class="nav-link text-sm font-medium transition-colors hover:text-primary" href="#portfolio">作品</a>
+        <a class="nav-link text-sm font-medium transition-colors hover:text-primary" href="#about">關於我</a>
+        <a class="nav-link text-sm font-medium transition-colors hover:text-primary" href="#services">服務</a>
+        <a class="nav-link text-sm font-medium transition-colors hover:text-primary" href="#contact">聯絡</a>
+        <a class="btn btn-primary btn-sm" href="#contact"><i class="bi bi-envelope-paper-heart me-2"></i>免費諮詢</a>
+      </div>
+    </nav>
+    <div class="hidden border-t border-base-300/50 bg-base-100 lg:hidden" data-mobile-menu>
+      <div class="container mx-auto max-w-7xl space-y-2 px-6 py-4">
+        <a class="block rounded-xl px-4 py-3 text-sm font-medium hover:bg-base-200" href="#portfolio">作品</a>
+        <a class="block rounded-xl px-4 py-3 text-sm font-medium hover:bg-base-200" href="#about">關於我</a>
+        <a class="block rounded-xl px-4 py-3 text-sm font-medium hover:bg-base-200" href="#services">服務</a>
+        <a class="block rounded-xl px-4 py-3 text-sm font-medium hover:bg-base-200" href="#contact">聯絡</a>
+        <a class="btn btn-primary w-full mt-2" href="#contact"><i class="bi bi-envelope-paper-heart me-2"></i>免費諮詢</a>
       </div>
     </div>
-  </nav>
+  </header>
 
   <main>
-    <section class="hero-section" id="home">
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6 hero-text">
+    <section class="hero-section relative overflow-hidden" id="home">
+      <div class="container mx-auto max-w-7xl px-6 py-24 lg:py-32">
+        <div class="grid items-center gap-14 lg:grid-cols-2">
+          <div class="hero-text">
             <p class="eyebrow">Illustration • Branding • Storytelling</p>
-            <h1>用畫筆揉碎日光，把平凡的日子渲染成詩。</h1>
-            <p class="lead">你好，我是 Yami。專注於日系透明感水彩的商業插畫家，透過溫暖的手繪線條，記錄生活小物與品牌故事。</p>
-            <div class="hero-actions">
+            <h1 class="font-display text-5xl leading-none md:text-6xl lg:text-7xl">用畫筆揉碎日光，把平凡的日子渲染成詩。</h1>
+            <p class="lead mt-5 max-w-2xl">你好，我是 Yami。專注於日系透明感水彩的商業插畫家，透過溫暖的手繪線條，記錄生活小物與品牌故事。</p>
+            <div class="hero-actions mt-8">
               <a href="#portfolio" class="btn btn-primary btn-lg">查看作品</a>
-              <a href="#about" class="btn btn-outline-secondary btn-lg">了解我</a>
+              <a href="#about" class="btn btn-outline btn-secondary btn-lg">了解我</a>
             </div>
-            <ul class="hero-meta list-inline mt-4">
-              <li class="list-inline-item"><i class="bi bi-brush me-1"></i>商業插畫</li>
-              <li class="list-inline-item"><i class="bi bi-stars me-1"></i>品牌合作</li>
-              <li class="list-inline-item"><i class="bi bi-gift me-1"></i>文創周邊</li>
+            <ul class="hero-meta mt-6 flex flex-wrap gap-4 text-sm">
+              <li><i class="bi bi-brush me-1"></i>商業插畫</li>
+              <li><i class="bi bi-stars me-1"></i>品牌合作</li>
+              <li><i class="bi bi-gift me-1"></i>文創周邊</li>
             </ul>
           </div>
-          <div class="col-lg-6 hero-visual">
-            <div class="hero-card">
+          <div class="hero-visual">
+            <div class="hero-card mx-auto max-w-2xl">
               <img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?auto=format&fit=crop&w=1200&q=80"
                    alt="日系插畫風格的生活場景"
-                   class="img-fluid rounded-4"
+                   class="h-[560px] w-full object-cover"
                    fetchpriority="high"
                    decoding="async">
             </div>
@@ -65,118 +78,102 @@
       </div>
     </section>
 
-    <section class="portfolio-section py-5" id="portfolio">
-      <div class="container">
-        <div class="section-heading text-center mb-5">
+    <section class="py-24" id="portfolio">
+      <div class="container mx-auto max-w-7xl px-6">
+        <div class="section-heading mb-12 text-center">
           <p class="eyebrow">Featured Portfolio</p>
           <h2>精選日系水彩作品案例</h2>
         </div>
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-4">
-            <a href="projects/time-shop.html" class="portfolio-card">
-              <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80" alt="時光雜貨鋪插畫作品" loading="lazy">
-              <div class="portfolio-card-body">
-                <span>品牌周邊 / 文創</span>
-                <h3>時光雜貨鋪</h3>
-                <div class="portfolio-card-footer">
-                  <span>查看案例</span>
-                  <i class="bi bi-arrow-right"></i>
-                </div>
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <a href="projects/time-shop.html" class="portfolio-card group block overflow-hidden rounded-[2rem] bg-base-100 shadow-sm transition-all duration-300 hover:-translate-y-1">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80" alt="時光雜貨鋪插畫作品" loading="lazy">
+            <div class="portfolio-card-body p-6">
+              <span>品牌周邊 / 文創</span>
+              <h3>時光雜貨鋪</h3>
+              <div class="portfolio-card-footer">
+                <span>查看案例</span>
+                <i class="bi bi-arrow-right"></i>
               </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="projects/time-shop.html" class="portfolio-card">
-              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="咖啡館日常插畫作品" loading="lazy">
-              <div class="portfolio-card-body">
-                <span>社群視覺 / 活動</span>
-                <h3>午後咖啡日記</h3>
-                <div class="portfolio-card-footer">
-                  <span>查看案例</span>
-                  <i class="bi bi-arrow-right"></i>
-                </div>
+            </div>
+          </a>
+          <a href="projects/time-shop.html" class="portfolio-card group block overflow-hidden rounded-[2rem] bg-base-100 shadow-sm transition-all duration-300 hover:-translate-y-1">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="咖啡館日常插畫作品" loading="lazy">
+            <div class="portfolio-card-body p-6">
+              <span>社群視覺 / 活動</span>
+              <h3>午後咖啡日記</h3>
+              <div class="portfolio-card-footer">
+                <span>查看案例</span>
+                <i class="bi bi-arrow-right"></i>
               </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="projects/time-shop.html" class="portfolio-card">
-              <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80" alt="書籍封面插畫作品" loading="lazy">
-              <div class="portfolio-card-body">
-                <span>書籍封面 / IP</span>
-                <h3>城市漫步記</h3>
-                <div class="portfolio-card-footer">
-                  <span>查看案例</span>
-                  <i class="bi bi-arrow-right"></i>
-                </div>
+            </div>
+          </a>
+          <a href="projects/time-shop.html" class="portfolio-card group block overflow-hidden rounded-[2rem] bg-base-100 shadow-sm transition-all duration-300 hover:-translate-y-1">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80" alt="書籍封面插畫作品" loading="lazy">
+            <div class="portfolio-card-body p-6">
+              <span>書籍封面 / IP</span>
+              <h3>城市漫步記</h3>
+              <div class="portfolio-card-footer">
+                <span>查看案例</span>
+                <i class="bi bi-arrow-right"></i>
               </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="projects/time-shop.html" class="portfolio-card">
-              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="生活小物插畫作品" loading="lazy">
-              <div class="portfolio-card-body">
-                <span>商品包裝 / 日常</span>
-                <h3>晨光小物系列</h3>
-                <div class="portfolio-card-footer">
-                  <span>查看案例</span>
-                  <i class="bi bi-arrow-right"></i>
-                </div>
+            </div>
+          </a>
+          <a href="projects/time-shop.html" class="portfolio-card group block overflow-hidden rounded-[2rem] bg-base-100 shadow-sm transition-all duration-300 hover:-translate-y-1">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="生活小物插畫作品" loading="lazy">
+            <div class="portfolio-card-body p-6">
+              <span>商品包裝 / 日常</span>
+              <h3>晨光小物系列</h3>
+              <div class="portfolio-card-footer">
+                <span>查看案例</span>
+                <i class="bi bi-arrow-right"></i>
               </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="projects/time-shop.html" class="portfolio-card">
-              <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=80" alt="節慶插畫作品" loading="lazy">
-              <div class="portfolio-card-body">
-                <span>節慶主視覺</span>
-                <h3>四季微光</h3>
-                <div class="portfolio-card-footer">
-                  <span>查看案例</span>
-                  <i class="bi bi-arrow-right"></i>
-                </div>
+            </div>
+          </a>
+          <a href="projects/time-shop.html" class="portfolio-card group block overflow-hidden rounded-[2rem] bg-base-100 shadow-sm transition-all duration-300 hover:-translate-y-1">
+            <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=80" alt="節慶插畫作品" loading="lazy">
+            <div class="portfolio-card-body p-6">
+              <span>節慶主視覺</span>
+              <h3>四季微光</h3>
+              <div class="portfolio-card-footer">
+                <span>查看案例</span>
+                <i class="bi bi-arrow-right"></i>
               </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="projects/time-shop.html" class="portfolio-card">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80" alt="角色設計插畫作品" loading="lazy">
-              <div class="portfolio-card-body">
-                <span>角色設計 / 企劃</span>
-                <h3>微笑的季節</h3>
-                <div class="portfolio-card-footer">
-                  <span>查看案例</span>
-                  <i class="bi bi-arrow-right"></i>
-                </div>
+            </div>
+          </a>
+          <a href="projects/time-shop.html" class="portfolio-card group block overflow-hidden rounded-[2rem] bg-base-100 shadow-sm transition-all duration-300 hover:-translate-y-1">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80" alt="角色設計插畫作品" loading="lazy">
+            <div class="portfolio-card-body p-6">
+              <span>角色設計 / 企劃</span>
+              <h3>微笑的季節</h3>
+              <div class="portfolio-card-footer">
+                <span>查看案例</span>
+                <i class="bi bi-arrow-right"></i>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="about-section py-5" id="about">
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-5">
-            <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=900&q=80" alt="插畫家 Yami 的人物形象" class="about-image img-fluid rounded-4" loading="lazy">
+    <section class="py-24" id="about">
+      <div class="container mx-auto max-w-7xl px-6">
+        <div class="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
+          <div>
+            <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=900&q=80" alt="插畫家 Yami 的人物形象" class="about-image h-[620px] w-full object-cover" loading="lazy">
           </div>
-          <div class="col-lg-7">
+          <div>
             <p class="eyebrow">About Me</p>
             <h2>在手寫的筆觸裡，找回生活溫柔的點滴</h2>
-            <p>我相信每個小物都有屬於自己的故事。從一杯咖啡、一本書、窗邊的綠植，到品牌的每個細節，我都希望以溫柔而有層次的水彩感，把它們變成能被記住的畫面。</p>
-            <p>我的創作擅長日系透明感水彩與手繪質感，除了插畫設計，也協助品牌打造更有溫度的視覺系統。</p>
-            <div class="row mt-4 g-3">
-              <div class="col-sm-6">
-                <div class="info-box">
-                  <h4>8+</h4>
-                  <p>年插畫創作經驗</p>
-                </div>
+            <p class="mt-4 text-base-content/80">我相信每個小物都有屬於自己的故事。從一杯咖啡、一本書、窗邊的綠植，到品牌的每個細節，我都希望以溫柔而有層次的水彩感，把它們變成能被記住的畫面。</p>
+            <p class="mt-4 text-base-content/80">我的創作擅長日系透明感水彩與手繪質感，除了插畫設計，也協助品牌打造更有溫度的視覺系統。</p>
+            <div class="mt-8 grid gap-4 sm:grid-cols-2">
+              <div class="info-box rounded-[1rem] p-6">
+                <h4 class="text-4xl font-semibold text-primary">8+</h4>
+                <p class="mt-2">年插畫創作經驗</p>
               </div>
-              <div class="col-sm-6">
-                <div class="info-box">
-                  <h4>120+</h4>
-                  <p>完成專案與合作</p>
-                </div>
+              <div class="info-box rounded-[1rem] p-6">
+                <h4 class="text-4xl font-semibold text-primary">120+</h4>
+                <p class="mt-2">完成專案與合作</p>
               </div>
             </div>
           </div>
@@ -184,63 +181,55 @@
       </div>
     </section>
 
-    <section class="services-section py-5" id="services">
-      <div class="container">
-        <div class="section-heading text-center mb-5">
+    <section class="py-24" id="services">
+      <div class="container mx-auto max-w-7xl px-6">
+        <div class="section-heading mb-12 text-center">
           <p class="eyebrow">Services</p>
           <h2>商業插畫服務項目</h2>
         </div>
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-3">
-            <div class="service-card">
-              <div class="service-icon"><i class="bi bi-book"></i></div>
-              <span>01</span>
-              <h3>書籍封面</h3>
-              <p>打造有故事感的書籍視覺，提升閱讀第一印象。</p>
-            </div>
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div class="service-card rounded-[1rem] p-6">
+            <div class="service-icon"><i class="bi bi-book"></i></div>
+            <span>01</span>
+            <h3>書籍封面</h3>
+            <p>打造有故事感的書籍視覺，提升閱讀第一印象。</p>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="service-card">
-              <div class="service-icon"><i class="bi bi-palette2"></i></div>
-              <span>02</span>
-              <h3>品牌插畫</h3>
-              <p>設計適合社群、EDM、包裝與官網的品牌畫面。</p>
-            </div>
+          <div class="service-card rounded-[1rem] p-6">
+            <div class="service-icon"><i class="bi bi-palette2"></i></div>
+            <span>02</span>
+            <h3>品牌插畫</h3>
+            <p>設計適合社群、EDM、包裝與官網的品牌畫面。</p>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="service-card">
-              <div class="service-icon"><i class="bi bi-gift"></i></div>
-              <span>03</span>
-              <h3>文創周邊</h3>
-              <p>協助生活小物、貼紙、明信片與系列產品的插畫開發。</p>
-            </div>
+          <div class="service-card rounded-[1rem] p-6">
+            <div class="service-icon"><i class="bi bi-gift"></i></div>
+            <span>03</span>
+            <h3>文創周邊</h3>
+            <p>協助生活小物、貼紙、明信片與系列產品的插畫開發。</p>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="service-card">
-              <div class="service-icon"><i class="bi bi-emoji-smile"></i></div>
-              <span>04</span>
-              <h3>角色設計</h3>
-              <p>打造陪伴使用者的角色與 IP 風格，擴展品牌辨識度。</p>
-            </div>
+          <div class="service-card rounded-[1rem] p-6">
+            <div class="service-icon"><i class="bi bi-emoji-smile"></i></div>
+            <span>04</span>
+            <h3>角色設計</h3>
+            <p>打造陪伴使用者的角色與 IP 風格，擴展品牌辨識度。</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="testimonial-section py-5">
-      <div class="container">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-5">
+    <section class="py-24">
+      <div class="container mx-auto max-w-7xl px-6">
+        <div class="grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
             <p class="eyebrow">Testimonials</p>
             <h2>合作夥伴的肯定</h2>
-            <p>從品牌視覺延伸到商品包裝，她總能把生活感與故事感完整帶入畫面中。</p>
+            <p class="mt-4 text-base-content/80">從品牌視覺延伸到商品包裝，她總能把生活感與故事感完整帶入畫面中。</p>
           </div>
-          <div class="col-lg-7">
-            <div class="testimonial-card">
-              <p>「Yami 在畫面中保留了溫度與細節，讓我們的品牌瞬間變得更有辨識度，也讓商品更容易打動消費者。」</p>
-              <div>
+          <div>
+            <div class="testimonial-card rounded-[1rem] p-8">
+              <p class="text-lg leading-8">「Yami 在畫面中保留了溫度與細節，讓我們的品牌瞬間變得更有辨識度，也讓商品更容易打動消費者。」</p>
+              <div class="mt-5">
                 <strong>林小姐</strong>
-                <span>品牌經營者</span>
+                <span class="block text-base-content/60">品牌經營者</span>
               </div>
             </div>
           </div>
@@ -248,31 +237,25 @@
       </div>
     </section>
 
-    <section class="cta-section py-5" id="contact">
-      <div class="container">
-        <div class="cta-box row align-items-center g-4">
-          <div class="col-lg-7">
+    <section class="py-24" id="contact">
+      <div class="container mx-auto max-w-7xl px-6">
+        <div class="cta-box grid items-center gap-8 rounded-[1.5rem] p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-12">
+          <div>
             <p class="eyebrow">Let’s Work Together</p>
             <h2>想把你的品牌故事畫進畫面嗎？</h2>
-            <p>歡迎商業合作、插畫接案、文創企劃與活動視覺需求，預計 24 小時內回覆。</p>
-            <ul class="contact-info list-unstyled mt-4">
+            <p class="mt-4 text-base-content/80">歡迎商業合作、插畫接案、文創企劃與活動視覺需求，預計 24 小時內回覆。</p>
+            <ul class="contact-info mt-6 space-y-3 text-base-content/80">
               <li><i class="bi bi-envelope me-2"></i>hello@yami-studio.com</li>
               <li><i class="bi bi-instagram me-2"></i>@yami_illustration</li>
               <li><i class="bi bi-geo-alt me-2"></i>台北 / 台中 可遠距合作</li>
             </ul>
           </div>
-          <div class="col-lg-5">
-            <form>
-              <div class="mb-3">
-                <input type="text" class="form-control" placeholder="你的名字">
-              </div>
-              <div class="mb-3">
-                <input type="email" class="form-control" placeholder="Email">
-              </div>
-              <div class="mb-3">
-                <textarea class="form-control" rows="4" placeholder="簡單說明你的需求"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary w-100">送出詢價</button>
+          <div>
+            <form class="space-y-4">
+              <input type="text" placeholder="你的名字" class="input input-bordered w-full bg-white/60">
+              <input type="email" placeholder="Email" class="input input-bordered w-full bg-white/60">
+              <textarea rows="4" placeholder="簡單說明你的需求" class="textarea textarea-bordered w-full bg-white/60"></textarea>
+              <button type="submit" class="btn btn-primary w-full">送出詢價</button>
             </form>
           </div>
         </div>
@@ -280,10 +263,10 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+  <footer class="py-8 text-base-content/70">
+    <div class="container mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
       <p class="mb-0">© <span id="year"></span> Yami. All rights reserved.</p>
-      <div class="footer-icons">
+      <div class="footer-icons flex items-center gap-4">
         <a href="#home"><i class="bi bi-arrow-up-circle"></i></a>
         <a href="#"><i class="bi bi-instagram"></i></a>
         <a href="#"><i class="bi bi-envelope"></i></a>
@@ -291,7 +274,6 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="assets/js/main.js"></script>
