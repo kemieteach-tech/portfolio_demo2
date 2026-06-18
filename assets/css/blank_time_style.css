@@ -62,7 +62,7 @@
             transition: all 0.4s ease;
         }
         .btn-cta:hover {
-            background-color: #f5eab5;
+            background-color: #cedc6f;
             color: var(--text-brown);
             transform: translateY(-5px);
             box-shadow: 0 15px 25px rgba(253, 245, 210, 1);
